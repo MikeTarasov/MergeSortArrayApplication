@@ -66,10 +66,9 @@ public class MergeSortArrayApplication {
         array[arrayIndex] = lowHalf[lowHalfIndex];
         lowHalfIndex++;
         if (lowHalfIndex == lowHalf.length) {
-            int index = arrayIndex + 1;
             for (int j = highHalfIndex; j < highHalf.length; j++) {
-                array[index] = highHalf[j];
-                index++;
+                arrayIndex++;
+                array[arrayIndex] = highHalf[j];
             }
             return -1;
         }
